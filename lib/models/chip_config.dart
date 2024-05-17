@@ -56,6 +56,8 @@ class ChipConfig {
   final WrapType wrapType;
 
   final bool autoScroll;
+  
+  final bool hide;
 
   const ChipConfig({
     this.deleteIcon,
@@ -71,5 +73,6 @@ class ChipConfig {
     this.wrapType = WrapType.scroll,
     this.labelPadding = EdgeInsets.zero,
     this.autoScroll = false,
+    this.hide = false,
   });
 }

@@ -268,6 +268,7 @@ class MultiSelectDropDown<T> extends StatefulWidget {
       this.animateSuffixIcon = true,
       this.singleSelectItemStyle,
       this.optionBuilder,
+
       this.searchLabel = 'Search'})
       : networkConfig = null,
         responseParser = null,
@@ -527,7 +528,7 @@ class _MultiSelectDropDownState<T> extends State<MultiSelectDropDown<T>> {
 
   /// Container Content for the dropdown.
   Widget _getContainerContent() {
-    if (_selectedOptions.isEmpty) {
+    if (_selectedOptions.isEmpty || widget.chipConfig.hide) {
       return HintText(
         hintText: widget.hint,
         hintColor: widget.hintColor,
